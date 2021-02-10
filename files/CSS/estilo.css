@@ -1,0 +1,392 @@
+body {  
+  background-image: url("background.jpeg");
+  background-color: #EAEEED;
+  background-repeat: repeat;
+  margin: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+#pagina_inicial {
+  display: block;
+}
+
+.cabecalho {
+    margin: 0 0 130px 0;
+    height: 200px;
+}
+
+.cabecalho img {
+  width: 700px;
+    float: right;
+}
+
+#menu_inicial {
+  display: block;
+  text-align: center;
+  margin-top: 220px;
+}
+
+.line {
+  display: block;
+}
+
+#online, #offline, #regras_inicial {
+  display: block;
+    font-family: Georgia;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #278C67;
+    padding: 7px 25px;
+    margin: 30px auto;
+    width: 50%;
+}
+
+#offline {
+  background-color: #29A66C;
+}
+
+#regras_inicial {
+  background-color: #D98723;
+}
+
+/* Cruz para fechar a janela modal */
+.close_on, .close_off, .close_regras_inicial, .close_regras_vs1 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close_on:hover, .close_on:focus, .close_off:hover,
+.close_off:focus, .close_regras_inicial:hover, 
+.close_regras_inicial:focus, .close_regras_vs1:hover, 
+.close_regras_vs1:focus  {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ONLINE */
+/* Janela online (background) */
+#show_online {
+  display: none;
+  width: 100%; 
+  height: 100%; 
+  position: fixed;  
+  z-index: 1; 
+  padding-top: 200px; 
+  left: 0;
+  top: 0;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+/* Conteudo da janela do online */
+.conteudo_modal_on {
+  background-color: #f2f2f2;
+  color: #424242;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 30%;
+  text-align: center;
+}
+
+/* Botao submeter no online*/
+.submit_on {
+  font-family: Georgia;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 10px 10px;
+  margin: 10px;
+  width: 90px;
+  height: 40px;
+}
+
+/* OFFLINE */
+/* Janela offline (background) */
+#show_offline {
+  display: none;
+  width: 100%; 
+  height: 100%; 
+  position: fixed;  
+  z-index: 1; 
+  padding-top: 200px; 
+  left: 0;
+  top: 0;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+/* Conteudo da janela do offline */
+.conteudo_modal_off {
+  background-color: #f2f2f2;
+    color: #424242;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 30%;
+    height: 22%;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+/* REGRAS */
+#show_regras_inicial, #show_regras_vs1 {
+  display: none;
+  width: 100%; 
+  height: 100%; 
+  position: fixed;  
+  z-index: 1; 
+  padding-top: 200px; 
+  left: 0;
+  top: 0;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.conteudo_modal_regras_inicial, .conteudo_modal_regras_vs1{
+  background-color: #f2f2f2;
+    color: #424242;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 60%;
+    height: 60%;
+    font-size: 20px;
+    overflow: auto;
+    text-align: justify;
+}
+
+/* centra título na janela das regras */
+.center{
+  text-align: center;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}  
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  background-color: #585858;  
+}
+
+/* PÁGINA DE JOGO CONTRA PC*/
+#pagina_jogo_vs1 {
+  display: none;
+}
+
+/* Logo */ 
+.cabecalho2{
+  float: right;
+  width: 350px;
+}
+
+/* Área de configuração */
+#conf_vs1 {
+  font-family: Georgia;
+  border: 1px solid black;
+  margin-top: 157px;
+  padding: 10px;
+  background-color: #C0C0C0;
+  border-radius: 15px;
+  font-size: 19px;
+  float: left;
+  margin-left: 3%;
+  position: absolute;
+  z-index: 1;
+}
+
+#submit_vs1 {
+  font-family: Georgia;
+  margin-left: 23%;
+  border-radius: 15px;
+  font-size: 19px;
+  width: 50%;
+}
+
+/* Botão voltar a pagina inicial */
+#voltar_pagInic, #botao_passar{
+  display: none;
+  font-family: Georgia;
+  background-color: #C0C0C0;
+  margin-left: 85%;
+  margin-top: 850px;
+  min-width: 191px;
+  height: 4%;
+  font-size: 20px;
+  border-radius: 10px;
+  position: absolute;
+}
+#turn_vs1 {
+  border: 1px solid black;
+    font-family: Georgia;
+    background-color: #C0C0C0;
+    margin-left: 3%;
+    font-size: 16px;
+    position: absolute;
+    margin-top: 550px;
+    width: 175px;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+}
+
+/* Tabuleiro */
+#tab, #tab2{
+  display: grid;
+    grid-template-columns: repeat(8,80px);
+    grid-template-rows: repeat(8,80px);
+    margin-top: 156px;
+    margin-left: 28%;
+    float: left;
+    z-index: 2;
+    position: absolute;
+}
+.grid_item {
+  border: 1px solid black;
+  padding: 1px;
+  background-color: #006400;
+    background-attachment: fixed;
+}
+.grid_img {
+  position: absolute;
+    text-align: center;
+    height: 75px;
+}
+
+#menu_pag1{
+  display: block;
+    float: left;
+    right: 10px;
+    margin-left: 12%;
+    z-index: 3;
+    position: absolute;
+    margin-top: 156px;
+    min-width: 25%;
+}
+
+#pontuacao, #pontuacaoON, #desistir, #desistirON, #regras_vs1 {
+    font-family: Georgia;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #278C67;
+    padding: 10px 30px;
+    margin: 60px;
+    width: 250px;
+    height: 70px;   
+}
+#pontuacao, #pontuacaoON {
+    display: none;
+}
+
+#desistir, #desistirON {
+    display: none;
+  background-color: #29A66C;
+}
+
+#regras_vs1 {
+    display: block;
+  background-color: #D98723;
+}
+
+#pontos_vs1 {
+    display: none;
+  font-family: Georgia;
+    border: 3px solid black;
+    margin-top: 650px;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    margin-left: 3%;
+    position: absolute;
+    z-index: 1;
+    width: 210px;
+}
+
+#pontosB {
+    color: white;
+}
+
+
+/* ***************** */
+
+/* Janela do Ranking */
+#table_pont {
+    display:none;
+}
+.rankingon {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.ranking_conteudo {
+  background-color: #fefefe;
+  color: #424242;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 60%;
+  height: 60%;
+  overflow: scroll;
+}
+
+.close_pontON {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close_pontON:hover, .close_pontON:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.titulo_ranking {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Acme'; 
+}
+
+.ranking_table {
+  border: 1px solid black;
+}
+.ranking_table th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+.ranking_table td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Othello</title> 
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<!-- Icone -->
+	<link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+	<div id="pagina_inicial"> <!-- Início da página inicial -->
+	
+		<div class="cabecalho">			
+			<img src="capa.png" alt="Imagem não disponível">
+		</div>
+
+		<div id="menu_inicial"> <!-- Início Menu Inicial -->
+			<div class="line"> <!-- Início online -->
+				<input id="online" type="button" value="ONLINE">
+				<div id="show_online">
+					<div class="conteudo_modal_on">
+						<span class="close_on">&times;</span>
+						<br><br><br>
+						<b>Utilizador: </b>&nbsp;
+						<input id="user" type="text" name="user"> <br> <br>
+						<b>Senha: </b>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input id="pass" type="password" name="pass"> <br> <br>
+						<input type="submit" name="Login" value="Login" class="submit_on" id="login">
+					</div>					
+				</div>
+			</div> <!-- Fim online -->
+
+			<div class="line"> <!-- Início offline -->
+				<input id="offline" type="button" value="OFFLINE">
+				<div id="show_offline">
+					<div class="conteudo_modal_off">
+						<span class="close_off">&times;</span>
+						<br>
+						<INPUT TYPE="radio" NAME="OPCAO" VALUE="op1" id="vs1">1 Jogador<br>
+						<INPUT TYPE="radio" NAME="OPCAO" VALUE="op2">2 Jogadores
+					</div>					
+				</div>
+			</div> <!-- Fim offline -->
+
+			<div class="line"> <!-- Início Regras -->
+				<input id="regras_inicial" type="button" value="REGRAS">
+				<div id="show_regras_inicial">
+					<div class="conteudo_modal_regras_inicial">
+						<span class="close_regras_inicial">&times;</span>
+						<h2 class="center">REGRAS DO OTHELLO</h2> <br>
+						<ul>
+							<li>O Othello é uma variante moderna do Reversi. Difere deste por fixar a posição inicial das 4 peças/discos iniciais nas casas centrais.</li>
+							<li>O tabuleiro é quadrado, grelha 8 linhas por 8 colunas, geralmente de fundo verde.
+							As peças do jogo denominam-se discos, são circulares, com 2 faces de diferentes tonalidades (uma branca e outra preta).</li>
+							<li>Na posição inicial há 4 peças, 2 de cada uma das 2 tonalidades, colocadas nas casas centrais. Peças da mesma tonalidade ficam em diagonal. As peças escuras jogam primeiro.
+							</li>
+							<li>Durante o jogo os jogadores jogam alternadamente, colocam uma peça da sua cor numa casa livre, se na mesma linha, coluna ou diagonal da peça jogada estiverem peças do adversário essas peças, da cor contrária, viram para a cor do jogador.
+							Só pode ser jogada uma peça se for virada alguma.</li>
+							<li>A peça colocada pode virar várias peças do adversário que estão na mesma linha coluna ou diagonal da peça jogada desde que num dos extremos esteja a peça jogada e no outro esteja uma peça do mesmo tom.</li>
+							<li>Podem ser viradas várias peças consecutivas do adversário na mesma linha, coluna ou diagonal desde que delimitadas pela peça jogada e outra do mesmo tom (do jogador).</li>
+							<li>Na sua vez, o jogador só pode jogar se virar peças, caso conrário não poderá jogar e terá de passar a jogada mas só pode passar se não tiver jogada possível.</li>
+							<li>O jogo termina quando nenhum jogador pode jogar, geralmente quando o tabuleiro está todo preenchido (mas não necessariamente). Ganha o jogador com maior número de peças.</li>
+						</ul>
+					</div>
+				</div>
+			</div> <!-- Fim Regras -->
+			
+		</div> <!-- Fim Menu Inicial -->
+				
+	</div> <!-- Fim da página inicial -->
+
+
+	<div id="pagina_jogo_vs1"> <!-- Início da página de jogo contra pc -->
+		<img src="logo_pag1.png" alt="Imagem não disponível" class="cabecalho2">
+		<!-- <img src="files/imagens/"> -->
+		<div id="conf_vs1"> <!-- Início da área de configuração -->
+			<span>Utilizador:</span><br>
+			<input type="text" name="user" id="user_vs1"><br><br>
+			<span>Selecione uma cor:</span><br>
+			<input type="radio" name="color" id="black_vs1">Preto<br>
+			<input type="radio" name="color" id="white_vs1">Branco<br><br>
+			<span>Selecione o nível:</span><br>
+			<input type="radio" name="level" id="easy_vs1">Fácil<br>
+			<input type="radio" name="level" id="medium_vs1">Médio<br>
+			<input type="radio" name="level" id="hard_vs1">Difícil<br><br>
+			<input type="submit" value="Jogar" id="submit_vs1">
+		</div> <!-- Fim da área de configuração -->
+
+		<div id="turn_vs1"> <!-- Início do turno de cada jogador -->
+			<span id="turno_vs1"></span>
+		</div> <!-- Fim do turno de cada jogador -->
+
+		<div id="tab"> <!-- Início do tabuleiro -->	
+		</div> <!-- Fim do tabuleiro -->
+
+		<div id="tab2"> <!-- Início do tabuleiro -->
+		</div> <!-- Fim do tabuleiro -->
+
+
+		<div id="menu_pag1"> <!-- Início do menu de botoes -->	
+			<!-- Início pontuacao -->
+			<input id="pontuacao" type="button" value="PONTUACAO">
+			<input type=button value="PONTUACAO"id="pontuacaoON">
+			<div id="table_pont" class="rankingon"> <!-- Início do ranking -->
+				<div class="ranking_conteudo">
+					<span class="close_pontON">&times;</span>
+					<p class="titulo_ranking">Ranking</p>
+					<table id="tab_raking" class="ranking_table">
+					</table>			
+				</div> <!-- Fim do ranking -->
+			</div>	
+			<!-- Fim pontuacao -->
+
+			<!-- Início desistir -->
+			<input id="desistir" type="button" value="DESISTIR">
+			<input id="desistirON" type="button" value="DESISTIR">
+
+				<!-- Fazer codigo para desistir -->
+			 <!-- Fim desistir -->			
+
+			<input id="regras_vs1" type="button" value="REGRAS">  <!-- Início regras vs1 -->
+			<div id="show_regras_vs1">
+				<div class="conteudo_modal_regras_vs1">
+					<span class="close_regras_vs1">&times;</span>
+					<h2 class="center">REGRAS DO OTHELLO</h2> <br>
+					<ul>
+						<li>O Othello é uma variante moderna do Reversi. Difere deste por fixar a posição inicial das 4 peças/discos iniciais nas casas centrais.</li>
+						<li>O tabuleiro é quadrado, grelha 8 linhas por 8 colunas, geralmente de fundo verde.
+						As peças do jogo denominam-se discos, são circulares, com 2 faces de diferentes tonalidades (uma branca e outra preta).</li>
+						<li>Na posição inicial há 4 peças, 2 de cada uma das 2 tonalidades, colocadas nas casas centrais. Peças da mesma tonalidade ficam em diagonal. As peças escuras jogam primeiro.
+						</li>
+						<li>Durante o jogo os jogadores jogam alternadamente, colocam uma peça da sua cor numa casa livre, se na mesma linha, coluna ou diagonal da peça jogada estiverem peças do adversário essas peças, da cor contrária, viram para a cor do jogador.
+						Só pode ser jogada uma peça se for virada alguma.</li>
+						<li>A peça colocada pode virar várias peças do adversário que estão na mesma linha coluna ou diagonal da peça jogada desde que num dos extremos esteja a peça jogada e no outro esteja uma peça do mesmo tom.</li>
+						<li>Podem ser viradas várias peças consecutivas do adversário na mesma linha, coluna ou diagonal desde que delimitadas pela peça jogada e outra do mesmo tom (do jogador).</li>
+						<li>Na sua vez, o jogador só pode jogar se virar peças, caso conrário não poderá jogar e terá de passar a jogada mas só pode passar se não tiver jogada possível.</li>
+						<li>O jogo termina quando nenhum jogador pode jogar, geralmente quando o tabuleiro está todo preenchido (mas não necessariamente). Ganha o jogador com maior número de peças.</li>
+					</ul>
+				</div>
+			</div>  <!-- Fim regras vs1 -->			
+
+		</div> <!-- Fim do menu de botoes -->	
+
+		<input id="voltar_pagInic" type="button" value="Voltar à página inicial"> <!-- Botao para voltar a pagina inicial -->
+		<input id="botao_passar" type="button" value="Passar"> <!-- Botao para passar a vez -->
+
+		<div id=pontos_vs1> <!-- Inicio de pontos de ambos os jogadores-->
+			<span id="pontosP"></span>
+			<span id="pontosB"></span>
+		</div> <!-- Fim de pontos de ambos os jogadores-->
+
+	</div> <!-- Fim da página de jogo contra pc-->
+
+	<script src="conf.js"></script>
+	<script src="game.js"></script>
+</body>
+</html> 
